@@ -1,7 +1,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/ClickPay.svg?style=flat)](http://cocoapods.org/?q=ClickPay)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/ClickPay.svg?style=flat)][license]
-[![Platform](https://img.shields.io/cocoapods/p/ClickPay.svg?style=flat)](https://github.com/paytabscom/paytabs-ios-library-sample/tree/clickpay)
+[![Platform](https://img.shields.io/cocoapods/p/ClickPay.svg?style=flat)](https://github.com/clickpaysa/clickpay-ios-library-sample)
 
 # ClickPay SDK
 **ClickPay SDk** makes the intergation with ClickPay payment gateway very easy by providing ready made payment screen that handles the card entry and billing & shipping info and complete the missing details. 
@@ -28,18 +28,30 @@
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate **ClickPay SDK** into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'ClickPay', '~> 6.1.17'
+pod 'ClickPay', '~> 6.1.18'
 ```
 ### Carthage
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate **ClickPay SDK** into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "paytabscom/paytabs-ios-library-sample" ~> 6.1.17
+github "clickpaysa/clickpay-ios-library-sample" ~> 6.1.18
 ```
+
+### Swift Package Manager 
+The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
+
+Once you have your Swift package set up, adding ClickPaySDK as a dependency is as easy as adding it to the dependencies value of your Package.swift.
+
+```ruby
+dependencies: [
+    .package(url: "https://github.com/clickpaysa/clickpay-ios-library-sample.git", .upToNextMajor(from: "6.1.18"))
+]
+```
+
 ### Manual
 Follow the below steps:
 
-1. Download the [framework](https://github.com/paytabscom/paytabs-ios-library-sample/tree/clickpay/sources/PaymentSDK.xcframework).
+1. Download the [framework](https://github.com/clickpaysa/clickpay-ios-library-sample/tree/main/sources/PaymentSDK.xcframework).
 2. Navigate to `General` section of your `Target`.
 3. Drag `PaymentSDK.xcframework` file to `Frameworks, Libraries, and Embedded Content` section.
 
@@ -290,11 +302,11 @@ See [LICENSE][license].
 
 [Support][1] | [Terms of Use][2] | [Privacy Policy][3]
 
- [1]: https://support.paytabs.com/
- [2]: https://www.paytabs.com/en/terms-of-use/
- [3]: https://www.paytabs.com/en/privacy-policy/
- [license]: https://github.com/paytabscom/paytabs-ios-library-sample/blob/clickpay/LICENSE
- [example]: https://github.com/paytabscom/paytabs-ios-library-sample/tree/clickpay/sample
- [englishstrings]: https://github.com/paytabscom/paytabs-ios-library-sample/tree/clickpay/en.strings
- [arabicstrings]: https://github.com/paytabscom/paytabs-ios-library-sample/tree/clickpay/ar.strings
-[applepayguide]: https://github.com/paytabscom/paytabs-ios-library-sample/blob/clickpay/ApplePayConfiguration.md
+ [1]: https://clickpay.freshdesk.com/en/support/solutions
+ [2]: https://clickpay.com.sa/wps/portal/clickPay/clickpay/footerpages/termsandconditions
+ [3]: https://clickpay.com.sa/wps/portal/clickPay/clickpay/footerpages/privacy
+ [license]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/LICENSE
+ [example]:https://github.com/clickpaysa/clickpay-ios-library-sample/tree/main/sample
+ [englishstrings]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/en.strings
+ [arabicstrings]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/ar.strings
+[applepayguide]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/ApplePayConfiguration.md
