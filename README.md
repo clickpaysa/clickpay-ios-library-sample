@@ -34,7 +34,7 @@ pod 'ClickPay', '~> 6.1.22'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate **ClickPay SDK** into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "clickpaysa/clickpay-ios-library-sample" ~> 6.1.18
+github "clickpaysa/clickpay-ios-library-sample" ~> 6.1.22
 ```
 
 ### Swift Package Manager 
