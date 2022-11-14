@@ -28,13 +28,13 @@
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate **ClickPay SDK** into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'ClickPay', '~> 6.1.22'
+pod 'ClickPay', '~> 6.3.2'
 ```
 ### Carthage
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate **ClickPay SDK** into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "clickpaysa/clickpay-ios-library-sample" ~> 6.1.22
+github "clickpaysa/clickpay-ios-library-sample" ~> 6.3.2
 ```
 
 ### Swift Package Manager 
@@ -44,7 +44,7 @@ Once you have your Swift package set up, adding ClickPaySDK as a dependency is a
 
 ```ruby
 dependencies: [
-    .package(url: "https://github.com/clickpaysa/clickpay-ios-library-sample.git", .upToNextMajor(from: "6.1.22"))
+    .package(url: "https://github.com/clickpaysa/clickpay-ios-library-sample.git", .upToNextMajor(from: "6.3.2"))
 ]
 ```
 
