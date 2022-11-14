@@ -55,9 +55,9 @@ class ViewController: UIViewController {
         buttonStackView.insertArrangedSubview(applePayButton, at: 1)
     }
     
-    let profileID = "42007"
-    let serverKey = "STJNLJWLDL-JBJRGGBRBD-6NHBMHTKMM"
-    let clientKey = "CKKMD9-HQVQ62-6RTT2R-GRMP2B"
+    let profileID = "*profileID*"
+    let serverKey = "*serverKey*"
+    let clientKey = "*clientKey*"
     
     var billingDetails: PaymentSDKBillingDetails! {
         return PaymentSDKBillingDetails(name: "John Smith",
