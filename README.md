@@ -117,13 +117,42 @@ let configuration = PaymentSDKConfiguration(profileID: "profile id",
 
 3. You are now ready to start payment and handle `PaymentManagerDelegate` 
 
+* For normal card payment use: 
+
 ```swift
 PaymentManager.startCardPayment(on: self, 
 							 configuration: configuration,
 							 delegate: self)
 
 ```
-
+* For tokenized payment use: 
+	
+	```swift
+    PaymentManager.startTokenizedCardPayment(on: self, 
+                             configuration: configuration,
+                             token: *token*,
+                             transactionRef: *transactionReference*
+                             delegate: self)
+	```
+	
+* For tokenized payment with 3DS feature enabled (request CVV) use:
+	
+	```swift
+    PaymentManager.start3DSecureTokenizedCardPayment(on: self, 
+                             configuration: configuration,
+                             savedCardInfo: SavedCardInfo,
+                             token: *token*
+                             delegate: self)
+	```
+	
+* For payment with the ability to let SDK save Cards on your behalf and show sheet of saved cards for user to choose from. use:
+	
+	```swift
+    PaymentManager.startPaymentWithSavedCards(on: self, 
+                             configuration: configuration,
+                             support3DS: true,
+                             delegate: self)
+	```
 ### Pay with Apple Pay
 
 1. Follow the guide [Steps to configure Apple Pay][applepayguide] to learn how to configure ApplePay with ClickPay.
