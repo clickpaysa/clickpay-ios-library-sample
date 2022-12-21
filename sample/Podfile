@@ -1,4 +1,4 @@
 
 target 'PaymentSDK Sample' do
-	pod 'ClickPay', '~> 6.3.2'
+	pod 'ClickPay', '~> 6.4.1'
 end
