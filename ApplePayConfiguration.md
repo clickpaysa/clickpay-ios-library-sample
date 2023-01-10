@@ -2,7 +2,7 @@
 
 Follow the steps to help you easily configure your Apple Pay with ClickPay
 
-1. Add Apple Pay capability to your ptoject
+1. Add Apple Pay capability to your project
 	* Click on ➕ to add a new capability
 ![image](https://user-images.githubusercontent.com/103630680/211566056-effe2c75-38cf-42be-bf8c-12a321ae8868.png)
         * Choose Apple pay 
