@@ -302,14 +302,7 @@ configuration.transactionType = .sale
 
 ```swift
 public enum AlternativePaymentMethod: String {
-    case unionPay = "unionpay"
     case stcPay = "stcpay"
-    case valu
-    case meezaQR = "meezaqr"
-    case omannet
-    case knetCredit  = "knetcredit"
-    case knetDebit  = "knetdebit"
-    case fawry
 }
 ```
 
