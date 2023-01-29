@@ -186,7 +186,7 @@ PaymentManager.startApplePayPayment(on: self,
 ```
 
 ### Pay with Alternative Payment Methods
-It becomes easy to integrate with other payment methods in your region like STCPay, OmanNet, KNet, Valu, Fawry, UnionPay, and Meeza, to serve a large sector of customers.
+It becomes easy to integrate with other payment methods like STCPay to serve a large sector of customers.
 
 1. Do the steps 1 and 2 from **Pay with Card**
 2. Choose one or more of the payment methods you want to support
