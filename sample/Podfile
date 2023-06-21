@@ -1,4 +1,5 @@
+source 'https://github.com/CocoaPods/Specs'
 
 target 'PaymentSDK Sample' do
-	pod 'ClickPay', '~> 6.4.1'
+	pod 'ClickPay', '~> 6.4.3'
 end
