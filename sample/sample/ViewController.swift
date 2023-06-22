@@ -95,6 +95,7 @@ class ViewController: UIViewController {
             .screenTitle("Pay with Card")
 //            .theme(theme)
             .billingDetails(billingDetails)
+            .alternativePaymentMehtods([.applePay])
     }
     
     var applePayConfiguration: PaymentSDKConfiguration! {

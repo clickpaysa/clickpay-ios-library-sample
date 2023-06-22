@@ -16,6 +16,6 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
-        .binaryTarget(name: "PaymentSDK", url: "https://github.com/clickpaysa/clickpay-ios-library-sample/raw/main/sources/PaymentSDK.xcframework.zip", checksum: "93dc5dae41d352f1ff5e60e6c670667c22e79398b434a5ee29be26f751b32cb7")
+        .binaryTarget(name: "PaymentSDK", url: "https://github.com/clickpaysa/clickpay-ios-library-sample/raw/main/sources/PaymentSDK.xcframework.zip", checksum: "c7c7287b650a7472d2dc6520f2bd496c43f519bf97d3a6b62224b5095bbb9519")
     ]
 )

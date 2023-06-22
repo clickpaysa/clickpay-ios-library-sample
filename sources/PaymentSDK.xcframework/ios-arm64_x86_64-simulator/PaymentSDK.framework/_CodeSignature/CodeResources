@@ -1078,7 +1078,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DiyMAx0dLRhENvwOmntTlanVYgk=
+		UCVMG/9anULHMgesyoquhhu4GKs=
 		</data>
 		<key>InputTextTableViewCell.nib</key>
 		<data>
@@ -1086,11 +1086,11 @@
 		</data>
 		<key>Modules/PaymentSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		JG2EdhoafJeiGY2diCxIZHcTFcU=
+		rYvSjyFSdugp7Q6CY8YZe/LZ/iI=
 		</data>
 		<key>Modules/PaymentSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ju8hhAaZytA4PPUTBCs/t9+vxSk=
+		kFUSsrImZ6pmWZ5OtSJdAXnFnjo=
 		</data>
 		<key>Modules/PaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -1098,19 +1098,19 @@
 		</data>
 		<key>Modules/PaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ju8hhAaZytA4PPUTBCs/t9+vxSk=
+		kFUSsrImZ6pmWZ5OtSJdAXnFnjo=
 		</data>
 		<key>Modules/PaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rNyKoDB+Hg9PPUDzD0mx+25o4Ac=
+		uZgEDDKaZL1MAELHOitEHcG2RaI=
 		</data>
 		<key>Modules/PaymentSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		JG2EdhoafJeiGY2diCxIZHcTFcU=
+		rYvSjyFSdugp7Q6CY8YZe/LZ/iI=
 		</data>
 		<key>Modules/PaymentSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		vsiHH8FU83BCgIQz8DRjQUHvnY8=
+		InSjs+YXRLZjUsHLnB0HP51hMBE=
 		</data>
 		<key>Modules/PaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -1118,11 +1118,11 @@
 		</data>
 		<key>Modules/PaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		vsiHH8FU83BCgIQz8DRjQUHvnY8=
+		InSjs+YXRLZjUsHLnB0HP51hMBE=
 		</data>
 		<key>Modules/PaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		lJC5pban0yoQwgkn3FllOOe1E1U=
+		7rrHmGzP87l+X+7CYuLnUORRofA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -4152,22 +4152,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JG2EdhoafJeiGY2diCxIZHcTFcU=
+			rYvSjyFSdugp7Q6CY8YZe/LZ/iI=
 			</data>
 			<key>hash2</key>
 			<data>
-			JsoMg3IG49Iz00Tdap7Vu20usCw0aAIpz7x8YE9MKZ8=
+			cDm4g54wB8RwO0wOdMKp/cywftfXBfhrQYB+e2HGHwc=
 			</data>
 		</dict>
 		<key>Modules/PaymentSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ju8hhAaZytA4PPUTBCs/t9+vxSk=
+			kFUSsrImZ6pmWZ5OtSJdAXnFnjo=
 			</data>
 			<key>hash2</key>
 			<data>
-			IRAimEWnmASKQ5IbB45YwDrt00naqQFtvrqZeUT1B5c=
+			y/C+X5fYVH5GbOT0nRCkpmR/S1x4pJRLHjslOg325fQ=
 			</data>
 		</dict>
 		<key>Modules/PaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -4185,44 +4185,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ju8hhAaZytA4PPUTBCs/t9+vxSk=
+			kFUSsrImZ6pmWZ5OtSJdAXnFnjo=
 			</data>
 			<key>hash2</key>
 			<data>
-			IRAimEWnmASKQ5IbB45YwDrt00naqQFtvrqZeUT1B5c=
+			y/C+X5fYVH5GbOT0nRCkpmR/S1x4pJRLHjslOg325fQ=
 			</data>
 		</dict>
 		<key>Modules/PaymentSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rNyKoDB+Hg9PPUDzD0mx+25o4Ac=
+			uZgEDDKaZL1MAELHOitEHcG2RaI=
 			</data>
 			<key>hash2</key>
 			<data>
-			k5UKPUscFHc8cvIyqgKTzbbqgHH/u1SIF/zbvBG2Ulk=
+			ocgCX1jJUJTkMVy0vba1l4tSIg/nxQTNmw0NGbzlLB4=
 			</data>
 		</dict>
 		<key>Modules/PaymentSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JG2EdhoafJeiGY2diCxIZHcTFcU=
+			rYvSjyFSdugp7Q6CY8YZe/LZ/iI=
 			</data>
 			<key>hash2</key>
 			<data>
-			JsoMg3IG49Iz00Tdap7Vu20usCw0aAIpz7x8YE9MKZ8=
+			cDm4g54wB8RwO0wOdMKp/cywftfXBfhrQYB+e2HGHwc=
 			</data>
 		</dict>
 		<key>Modules/PaymentSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vsiHH8FU83BCgIQz8DRjQUHvnY8=
+			InSjs+YXRLZjUsHLnB0HP51hMBE=
 			</data>
 			<key>hash2</key>
 			<data>
-			b5gu2Gctpco66WDWS57s1+vJiJzBobOElnwY/AhGlvg=
+			L30KOTA6/BZGKOi9B+us78Zwk8/Ti8y6YZNEyDvELCI=
 			</data>
 		</dict>
 		<key>Modules/PaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -4240,22 +4240,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vsiHH8FU83BCgIQz8DRjQUHvnY8=
+			InSjs+YXRLZjUsHLnB0HP51hMBE=
 			</data>
 			<key>hash2</key>
 			<data>
-			b5gu2Gctpco66WDWS57s1+vJiJzBobOElnwY/AhGlvg=
+			L30KOTA6/BZGKOi9B+us78Zwk8/Ti8y6YZNEyDvELCI=
 			</data>
 		</dict>
 		<key>Modules/PaymentSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lJC5pban0yoQwgkn3FllOOe1E1U=
+			7rrHmGzP87l+X+7CYuLnUORRofA=
 			</data>
 			<key>hash2</key>
 			<data>
-			n5nMM5GgmuM/DZHuVPETC0jLebRz/fMwYHCIL2HHbCg=
+			YeG+saAi2VkzcXHYDFS7qPDAXiG/0Ubl8HKfezyjtn4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
