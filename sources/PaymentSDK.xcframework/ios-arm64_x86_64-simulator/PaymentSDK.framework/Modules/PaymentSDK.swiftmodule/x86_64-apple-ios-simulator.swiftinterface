@@ -1,9 +1,13 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
-// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PaymentSDK
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PaymentSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
+import AVKit
+import Accelerate
 import CommonCrypto
+import CoreGraphics
+import CoreML
 import CoreTelephony
 import Foundation
 import PassKit
@@ -16,6 +20,8 @@ import Vision
 import WebKit
 import _Concurrency
 import _StringProcessing
+import os.log
+import os
 public protocol PaymentSDKMerchantConfiguration {
   var profileID: Swift.String { get set }
   var serverKey: Swift.String { get set }
@@ -93,6 +99,18 @@ extension PaymentSDK.PaymentSDKConfiguration : Foundation.NSCopying {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) public func hideCardScanner(isHidden: Swift.Bool)
+  @objc deinit
+}
+@available(iOS 13.0, *)
+@frozen public enum CardImageVerificationSheetResult {
+  case completed(scannedCard: PaymentSDK.ScannedCard)
+  case canceled(reason: PaymentSDK.CancellationReason)
+  case failed(error: Swift.Error)
+}
+@available(iOS 13.0, *)
+final public class CardImageVerificationSheet {
+  public init(cardImageVerificationIntentId: Swift.String, cardImageVerificationIntentSecret: Swift.String, configuration: PaymentSDK.CardImageVerificationSheet.Configuration = Configuration())
+  final public func present(from presentingViewController: UIKit.UIViewController, completion: @escaping (PaymentSDK.CardImageVerificationSheetResult) -> Swift.Void, animated: Swift.Bool = true)
   @objc deinit
 }
 extension PassKit.PKPaymentMethodType : Swift.CustomStringConvertible {
@@ -502,6 +520,25 @@ public enum PaymentSDKError : Swift.Error {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
+@available(iOS 13, *)
+@frozen public enum CardScanSheetResult {
+  case completed(card: PaymentSDK.ScannedCard)
+  case canceled
+  case failed(error: Swift.Error)
+}
+@available(iOS 13, *)
+public class CardScanSheet {
+  public init()
+  public func present(from presentingViewController: UIKit.UIViewController, completion: @escaping (PaymentSDK.CardScanSheetResult) -> Swift.Void, animated: Swift.Bool = true)
+  @objc deinit
+}
+public struct ScannedCard : Swift.Equatable {
+  public let pan: Swift.String
+  public let expiryMonth: Swift.String?
+  public let expiryYear: Swift.String?
+  public let name: Swift.String?
+  public static func == (a: PaymentSDK.ScannedCard, b: PaymentSDK.ScannedCard) -> Swift.Bool
+}
 extension PaymentSDK.PaymentSDKCardInputView {
   @discardableResult
   @_Concurrency.MainActor(unsafe) public func setMerchnatLogo(image: UIKit.UIImage) -> PaymentSDK.PaymentSDKCardInputView
@@ -517,6 +554,20 @@ extension PaymentSDK.PaymentSDKCardInputView {
   @_Concurrency.MainActor(unsafe) public func setStrokeColor(color: UIKit.UIColor) -> PaymentSDK.PaymentSDKCardInputView
   @discardableResult
   @_Concurrency.MainActor(unsafe) public func setInputsCornerRadius(radius: CoreFoundation.CGFloat) -> PaymentSDK.PaymentSDKCardInputView
+}
+public enum CardScanSheetError : Swift.Error {
+  case invalidClientSecret
+  case unknown(debugDescription: Swift.String)
+}
+extension PaymentSDK.CardScanSheetError : Foundation.LocalizedError {
+  public var localizedDescription: Swift.String {
+    get
+  }
+}
+extension PaymentSDK.CardScanSheetError : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
 }
 extension PaymentSDK.PaymentManager {
   public static func startApplePayPayment(on rootViewController: UIKit.UIViewController, configuration: PaymentSDK.PaymentSDKConfiguration, delegate: PaymentSDK.PaymentManagerDelegate?)
@@ -553,6 +604,12 @@ extension PaymentSDK.CountryPickerViewController : UIKit.UISearchControllerDeleg
   @_Concurrency.MainActor(unsafe) @objc dynamic public func willDismissSearchController(_ searchController: UIKit.UISearchController)
 }
 public struct PayModels {
+}
+@available(iOS 13.0, *)
+extension PaymentSDK.CardImageVerificationSheet {
+  public struct Configuration {
+    public init()
+  }
 }
 public typealias CPVCountry = PaymentSDK.Country
 public enum SearchBarPosition {
@@ -695,6 +752,16 @@ public class CreditCardValidator {
   public func onlyNumbers(string: Swift.String) -> Swift.String
   @objc deinit
 }
+public enum CancellationReason : Swift.String, Swift.Equatable {
+  case back
+  case closed
+  case userCannotScan
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 extension PaymentSDK.PaymentManager {
   public static func startAlternativePaymentMethod(on rootViewController: UIKit.UIViewController, configuration: PaymentSDK.PaymentSDKConfiguration, delegate: PaymentSDK.PaymentManagerDelegate?)
 }
@@ -720,3 +787,5 @@ extension PaymentSDK.SearchBarPosition : Swift.Hashable {}
 extension PaymentSDK.Model : Swift.Equatable {}
 extension PaymentSDK.Model : Swift.Hashable {}
 extension PaymentSDK.Model : Swift.RawRepresentable {}
+extension PaymentSDK.CancellationReason : Swift.Hashable {}
+extension PaymentSDK.CancellationReason : Swift.RawRepresentable {}
