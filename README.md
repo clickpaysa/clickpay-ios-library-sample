@@ -312,7 +312,7 @@ configuration.transactionType = .sale
 
 ## Demo application
 
-Check our complete [example][example].
+Check our complete examples [For UIKit][example], [For SwiftUI][swiftui].
 
 <img src="https://user-images.githubusercontent.com/95287975/160391395-a8e591fc-85ed-459d-b0ce-1768d3bddd8a.png" width="370">
 
@@ -329,6 +329,7 @@ See [LICENSE][license].
  [3]: https://clickpay.com.sa/wps/portal/clickPay/clickpay/footerpages/privacy
  [license]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/LICENSE
  [example]:https://github.com/clickpaysa/clickpay-ios-library-sample/tree/main/sample
+ [swiftui]:https://github.com/clickpaysa/clickpay-ios-library-sample/tree/main/sample-swiftui 
  [englishstrings]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/en.strings
  [arabicstrings]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/ar.strings
 [applepayguide]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/ApplePayConfiguration.md
