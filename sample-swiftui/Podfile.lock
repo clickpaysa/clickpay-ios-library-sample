@@ -1,0 +1,16 @@
+PODS:
+  - ClickPay (6.5.1)
+
+DEPENDENCIES:
+  - ClickPay (~> 6.5.1)
+
+SPEC REPOS:
+  trunk:
+    - ClickPay
+
+SPEC CHECKSUMS:
+  ClickPay: 5109ab7442148eb31876f6ce7dafd6a8c5016c11
+
+PODFILE CHECKSUM: 74e8d9364293e6952169e7f65b23fc22311e6e8c
+
+COCOAPODS: 1.13.0
