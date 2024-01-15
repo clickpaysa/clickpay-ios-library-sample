@@ -1,5 +1,5 @@
 PODS:
-  - ClickPay (6.4.4)
+  - ClickPay (6.5.2)
 
 DEPENDENCIES:
   - ClickPay (from `/Users/amrmagdy/Desktop/Dev/clickpay`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "/Users/amrmagdy/Desktop/Dev/clickpay"
 
 SPEC CHECKSUMS:
-  ClickPay: a35cdd9be2bcfd8b28cb28616a42c6dc888c5e2a
+  ClickPay: eeda94750c88598ca352a57ed98bad2a29fd6d2a
 
-PODFILE CHECKSUM: 0872e3237a2d5e1de100c29be490e07d95aca7af
+PODFILE CHECKSUM: 8ce9ff26b72ae4ebdf34cbf118d0a5f983adf6e2
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.13.0
