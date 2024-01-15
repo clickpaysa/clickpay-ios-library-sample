@@ -6,5 +6,5 @@ target 'sample-swiftui' do
   use_frameworks!
 
   # Pods for sample-swiftui
-pod 'ClickPay', '~> 6.4.4'
+pod 'ClickPay', '~> 6.5.2'
 end
