@@ -1,5 +1,5 @@
 PODS:
-  - ClickPay (6.5.2)
+  - ClickPay (6.5.4)
 
 DEPENDENCIES:
   - ClickPay (from `/Users/amr/Desktop/Projects/SDKs/ClickPay-iOS/clickpay-ios-library-sample`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "/Users/amr/Desktop/Projects/SDKs/ClickPay-iOS/clickpay-ios-library-sample"
 
 SPEC CHECKSUMS:
-  ClickPay: eeda94750c88598ca352a57ed98bad2a29fd6d2a
+  ClickPay: b567219f0820fab053c09ae7e42ce0aae4176327
 
 PODFILE CHECKSUM: 6b5e0d767cb768e7f8490ede34716cdabb7d44f3
 
