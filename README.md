@@ -18,8 +18,8 @@
 
 
 ## Requirements
-* iOS 10.0+
-* Xcode 10.0+
+* iOS 13.0+, Swift 5.0+
+* Xcode 15.0+
 * Create a [ClickPay](https://merchant.clickpay.com.sa) merchant account relative to your country.
 
 ## Installation
@@ -28,13 +28,13 @@
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate **ClickPay SDK** into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'ClickPay', '~> 6.5.4'
+pod 'ClickPay', '~> 6.6.0'
 ```
 ### Carthage
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate **ClickPay SDK** into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "clickpaysa/clickpay-ios-library-sample" ~> 6.5.4
+github "clickpaysa/clickpay-ios-library-sample" ~> 6.6.0
 ```
 
 ### Swift Package Manager 
@@ -44,7 +44,7 @@ Once you have your Swift package set up, adding ClickPaySDK as a dependency is a
 
 ```ruby
 dependencies: [
-    .package(url: "https://github.com/clickpaysa/clickpay-ios-library-sample.git", .upToNextMajor(from: "6.5.4"))
+    .package(url: "https://github.com/clickpaysa/clickpay-ios-library-sample.git", .upToNextMajor(from: "6.6.0"))
 ]
 ```
 
@@ -114,6 +114,52 @@ let configuration = PaymentSDKConfiguration(profileID: "profile id",
             .billingDetails(billingDetails)
 
 ```
+Options to set expiry timeout for the card payment screen
+
+```
+configuration.expiryTime =120
+```
+
+Options to add discounts on card payment
+
+```
+  let cardDiscounts: [PaymentSDKCardDiscount] = [
+            PaymentSDKCardDiscount(discountCards: ["4001"], dicsountValue: 90.0, discountTitle: "● 90% discount - 40001, 90% discount - 40001, 90% discount - 40001", isPercentage: true),
+            PaymentSDKCardDiscount(discountCards: ["4000", "4111", "400012"], dicsountValue: 1.0, discountTitle: "● 1% discount - 4000,4111,400012", isPercentage: true),
+            PaymentSDKCardDiscount(discountCards: ["5498", "5200"], dicsountValue: 2.0, discountTitle: "● 2% discount - 5498,5299 (977)", isPercentage: true),
+            PaymentSDKCardDiscount(discountCards: ["4012"], dicsountValue: 5.0, discountTitle: "● 5 discount - 4012 (530)", isPercentage: false)
+        ]
+configuration.cardDiscounts = cardDiscounts
+```
+Each instance of PaymentSDKCardDiscount is initialized with parameters corresponding to the accepted card types (discountCards), the value of the discount (discountValue), the title of the discount (discountTitle), and whether the discount is a percentage (isPercentage).
+
+
+
+You have the option to close the payment screen if there are no ongoing transactions.
+```swift
+ PaymentManager.cancelPayment { didCancel in
+                if didCancel {
+            //do something
+            }
+```
+
+#### Card Approval
+
+The Payment SDK allows you to customize BIN-based discounts through the `PaymentSdkCardApproval` class, which collects approval details via an API.
+
+##### Example Usage
+
+```swift
+configuration.cardApproval = PaymentSDKCardApproval(validationUrl: " https://yourdomain.com/validate",
+ binLength: 8,
+ blockIfNoResponse: false)
+
+```
+
+- **`validationUrl`**: The endpoint provided by the business where the Payment SDK will pass transaction information and receive a response.
+- **`binLength`**: The length of the BIN (default is 6 digits, can be set to 8).
+- **`blockIfNoResponse`**: Determines whether to block the transaction if there is no response from the validation endpoint.
+
 
 3. You are now ready to start payment and handle `PaymentManagerDelegate` 
 
@@ -145,14 +191,6 @@ PaymentManager.startCardPayment(on: self,
                              delegate: self)
 	```
 	
-* For payment with the ability to let SDK save Cards on your behalf and show sheet of saved cards for user to choose from. use:
-	
-	```swift
-    PaymentManager.startPaymentWithSavedCards(on: self, 
-                             configuration: configuration,
-                             support3DS: true,
-                             delegate: self)
-	```
 ### Pay with Apple Pay
 
 1. Follow the guide [Steps to configure Apple Pay][applepayguide] to learn how to configure ApplePay with ClickPay.
@@ -251,6 +289,9 @@ You can use the strings file below to copy the key and add it to your app locali
 
 * [English][englishstrings]
 * [Arabic][arabicstrings]
+* [French][frenchstrings]
+* [Turkish][turkishstrings]
+* [Urdu][urdustrings]
 
 ## Enums
 
@@ -291,7 +332,8 @@ The default type is sale
 ```swift
 public enum TransactionType: String, CaseIterable {
     case sale
-    case authorize = "auth"
+    case authorize
+    case register
 }
 ```
 
@@ -332,4 +374,7 @@ See [LICENSE][license].
  [swiftui]:https://github.com/clickpaysa/clickpay-ios-library-sample/tree/main/sample-swiftui 
  [englishstrings]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/en.strings
  [arabicstrings]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/ar.strings
+ [frenchstrings]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/fr.strings
+ [turkishstrings]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/tr.strings
+ [urdustrings]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/ur.strings
 [applepayguide]: https://github.com/clickpaysa/clickpay-ios-library-sample/blob/main/ApplePayConfiguration.md
